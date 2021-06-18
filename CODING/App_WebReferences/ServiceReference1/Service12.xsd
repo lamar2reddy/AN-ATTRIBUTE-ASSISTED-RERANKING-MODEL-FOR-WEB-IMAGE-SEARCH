@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1064/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Wcf_Image" />
+  <xs:element name="register_cs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Wcf_Image" minOccurs="0" name="obj_reg" nillable="true" type="q1:Register" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="register_csResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="register_csResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="login_cs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Wcf_Image" minOccurs="0" name="obj_log" nillable="true" type="q2:Register" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="login_csResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login_csResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="textupload_cs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Wcf_Image" minOccurs="0" name="obj_txtupld" nillable="true" type="q3:textupload" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="textupload_csResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="textupload_csResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="datalistview_cs">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="datalistview_csResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="datalistview_csResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
